@@ -1,0 +1,105 @@
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* Fundo suave para contraste */
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Ajuste conforme necessário */
+  margin: 0 auto; /* Para centralizar o conteúdo */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave ao redor do container */
+  border-radius: 10px; /* Bordas arredondadas para o container */
+  padding: 20px;
+  background-color: #ffffff; /* Cor de fundo branca */
+}
+
+.image-container {
+  flex: 1;
+  max-width: 40%; /* Limitar a largura da imagem */
+  padding-right: 30px; /* Espaço maior entre a imagem e o texto */
+  display: flex;
+  justify-content: center; /* Centralizar a imagem */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Bordas arredondadas para a imagem */
+  object-fit: cover; /* A imagem preencherá a área sem distorção */
+  transition: transform 0.3s ease; /* Efeito de transição ao passar o mouse */
+}
+
+.image-container img:hover {
+  transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.text-container {
+  flex: 1;
+  max-width: 55%; /* O texto ocupará 55% da largura */
+  padding-left: 30px; /* Espaço maior ao lado do texto */
+}
+
+.text-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-color); 
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-family: 'Georgia', serif;
+  text-transform: capitalize; /* Título com primeira letra maiúscula */
+}
+
+.text-container p {
+  font-size: 16px;
+  line-height: 1.8;
+  color:var(--primary-color); /* Texto em cor mais suave */
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.text-container a {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: black;
+  padding: 12px 24px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.text-container a:hover {
+  background-color: #a76f47;
+  color: #fff; /* Cor do botão quando o mouse passa */
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column; /* Imagem e texto ficam empilhados */
+    align-items: center;
+  }
+
+  .image-container,
+  .text-container {
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .image-container img {
+    max-width: 90%; /* Ajuste a largura da imagem para telas menores */
+  }
+
+  .text-container h2 {
+    font-size: 24px; /* Tamanho de fonte reduzido em telas pequenas */
+  }
+
+  .text-container p {
+    font-size: 14px; /* Texto um pouco menor em telas pequenas */
+  }
+}

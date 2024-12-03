@@ -1,0 +1,26 @@
+<div class="menu-bar-container">
+    <div class="menu-bar-nav" [ngClass]="{ 'scrolled': isScrolled, 'open': isMenuOpen }">
+      <div class="menu-bar-logo">
+        <img src="../../../assets/logoloja.png" alt="Logo" />
+      </div>
+
+      <div *ngIf="isMobile" class="menu-bar-hamburger" (click)="toggleMenu()">
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+        <div class="hamburger-icon"></div>
+      </div>
+      
+      <ul id="menu-list" *ngIf="isMenuOpen || !isMobile">
+        <li><a [routerLink]="['/']" >Sobre</a></li>
+        <li><a [routerLink]="['/']">Serviços</a></li>
+        <li><a [routerLink]="['/']">Blog</a></li>
+        <li><a [routerLink]="['/']">Contatos</a></li>
+      </ul>
+    </div>
+    <div class="menu-bar-image">
+      <img src="../../../assets/Vamos La.jpg" alt="Imagem Top" />
+    </div>
+  </div>
+  
+
+

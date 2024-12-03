@@ -1,0 +1,135 @@
+.menu-bar-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
+
+.menu-bar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0 20px;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-bar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar-logo img {
+    height: 40px;
+    width: auto;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+li {
+    margin-right: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    font-size: 1.3rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.menu-bar-nav.scrolled {
+    background-color: var(--secondary-color);
+}
+
+.menu-bar-image > img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.nutrition-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    line-height: 1.9;
+    color: #333;
+    margin: 20px 0;
+    padding: 0 15px;
+    text-align: justify;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.nutrition-text::first-letter {
+    font-size: 30px;
+    font-weight: bold;
+    color: #5D6A32;
+}
+
+.nutrition-text p {
+    margin-bottom: 10px;
+}
+.menu-bar-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .hamburger-icon {
+    height: 5px; 
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+  
+  
+  @media (max-width: 700px) {
+    .menu-bar-nav ul {
+      display: none; 
+    }
+    .menu-bar-hamburger {
+      display: flex;       
+      z-index: 1001; 
+    }
+  
+    #menu-list {
+      display: block;
+      background-color: var(--secondary-color);
+      padding: 20px;
+      position: absolute;
+      top: 80px;
+      left: 25px;
+      right: 25px;
+      width: 80%;
+      list-style: none;
+      margin: 0;
+    }
+    #menu-list li {
+      margin-bottom: 10px;
+      
+    }
+  }
